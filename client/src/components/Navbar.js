@@ -3,11 +3,11 @@ import React from 'react';
 const Navbar = () => {
   return (
     <nav>
-      <div class="nav-wrapper">
-        <a href="/" class="brand-logo center">
+      <div className="nav-wrapper">
+        <a href="/" className="brand-logo center">
           Aquarius Movement
         </a>
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <ul id="nav-mobile" className="left hide-on-med-and-down">
           <li>
             <a href="/">Home</a>
           </li>

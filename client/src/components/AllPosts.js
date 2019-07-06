@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import API from '../utils/API';
+import parse from 'html-react-parser';
 
 class AllPosts extends Component {
   state = {
@@ -21,10 +22,11 @@ class AllPosts extends Component {
   };
 
   listAllPosts = post => {
+    const body = post.body;
     return (
       <li key={post.id}>
         <h3>{post.title}</h3>
-        <p>{post.body}</p>
+        {parse(body)}
       </li>
     );
   };

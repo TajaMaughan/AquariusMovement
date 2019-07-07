@@ -26,14 +26,14 @@ class AllPosts extends Component {
     return (
       <li key={post.id}>
         <h3>{post.title}</h3>
-        {parse(body)}
+        {parse(body)} __________________________________
       </li>
     );
   };
 
   render() {
     return (
-      <div>
+      <div className="black-text">
         <ul>{this.state.allPosts.map(this.listAllPosts)}</ul>
       </div>
     );

@@ -8,19 +8,11 @@ class Post extends Component {
     super(props, context);
 
     this.state = {
-      title: '',
       body: ''
     };
 
     this.handleChange = this.handleChange.bind(this);
   }
-
-  handleTitleChange = event => {
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
-  };
 
   handleChange(value) {
     this.setState({ body: value })
@@ -37,11 +29,7 @@ class Post extends Component {
     return (
       <div>
         <form>
-          <div className="input-field">
-          <input type="text" name="title" value={this.state.title} onChange={this.handleTitleChange}/>
-          </div>
-          <br />
-          <Quill name="body" value={this.state.body} onChange={this.handleChange} />
+          <Quill name="body" className="black-text" value={this.state.body} onChange={this.handleChange} />
           <button onClick={this.createPost}>Submit</button>
         </form>
       </div>

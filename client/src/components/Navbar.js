@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav>
       <Router>
-        <div className="nav-wrapper">
+        <div className="nav-wrapper blue darken-2">
           <Link to="/" className="brand-logo center">
             Aquarius Movement
           </Link>

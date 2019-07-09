@@ -24,10 +24,15 @@ class AllPosts extends Component {
   listAllPosts = post => {
     const body = post.body;
     return (
+      <div className="container">
+      <div className="row">
+      <div className="col s12">
       <li key={post.id}>
         <h3>{post.title}</h3>
-        {parse(body)} __________________________________
+        {parse(body)}
+        <div className="divider col s12"></div>
       </li>
+      </div></div></div>
     );
   };
 

@@ -27,7 +27,7 @@ class Post extends Component {
   };
   render() {
     return (
-      <div className="container">
+      <div className="container section">
         <form>
           <Quill name="body" className="black-text" value={this.state.body} onChange={this.handleChange} />
           <button onClick={this.createPost}>Submit</button>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import API from '../utils/API';
 import parse from 'html-react-parser';
+import moment from 'moment';
 
 class AllPosts extends Component {
   state = {
@@ -25,14 +26,16 @@ class AllPosts extends Component {
     const body = post.body;
     return (
       <div className="container">
-      <div className="row">
-      <div className="col s12">
-      <li key={post.id}>
-        <h3>{post.title}</h3>
-        {parse(body)}
-        <div className="divider col s12"></div>
-      </li>
-      </div></div></div>
+        <div className="row">
+          <div className="col s12">
+            <li key={post.id}>
+              {parse(body)}
+              <h6>Posted on {moment(post.createdAt).format('LLL')}</h6>
+              <div className="divider" />
+            </li>
+          </div>
+        </div>
+      </div>
     );
   };
 

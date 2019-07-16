@@ -22,6 +22,7 @@ const Navbar = () => {
         </div>
 
         <Route path="/post" component={Post} />
+        <Route exact path="/" component={AllPosts} />
         <Route path="/allposts" component={AllPosts} />
       </Router>
     </nav>
